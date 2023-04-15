@@ -435,9 +435,11 @@ a {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
 }
-
+.footer-wrap:nth-child(2) {
+  margin-left: 120px;
+  margin-right: 80px;
+}
 .footer-text {
   display: inline-block;
   margin-top: 16px;
@@ -450,6 +452,7 @@ a {
   max-width: 264px;
 }
 .footer-social-media {
+  font-weight: 500;
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.5;
@@ -477,6 +480,41 @@ a {
 .footer-link:hover,
 .footer-link:focus {
   background-color: rgba(49, 208, 170, 1);
+}
+/* .footer-form {
+  display: flex;
+  flex-direction: column;
+} */
+.footer-form > label {
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.footer-btn {
+  background-color: var(--background-btn-color);
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--btn-text-color);
+  margin-left: 24px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--background-btn-hover-color);
 }
 /* PORTFOLIO PAGE */
 .visually-hidden {
@@ -614,6 +652,7 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--modal-background-color);
+  padding: 72px 24px 24px;
 }
 .modal-icon {
   fill: currentColor;
@@ -642,4 +681,12 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.backdrop-title {
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
 }
