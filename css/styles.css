@@ -485,7 +485,21 @@ a {
   display: flex;
   flex-direction: column;
 } */
-.footer-form > label {
+.footer-input {
+  display: inline-block;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+  min-width: 264px;
+  height: 40px;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px auto 8px 16px;
+  background-color: inherit;
+}
+.footer-input-text {
   font-weight: 500;
   margin-bottom: 16px;
   font-size: 16px;
@@ -639,6 +653,7 @@ a {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
+/* MODAL */
 .modal {
   position: absolute;
   top: 50%;
@@ -685,8 +700,73 @@ a {
 .backdrop-title {
   font-size: 16px;
   line-height: 1.5;
-
+  font-weight: 500;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-color);
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 8px;
+}
+.form-field:last-child {
+  margin-bottom: 16px;
+}
+textarea:placeholder-shown {
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+
+  color: rgba(46, 47, 66, 0.4);
+}
+.modal-input {
+  display: inline-block;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+  width: 100%;
+  height: 40px;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px auto 8px 16px;
+}
+.modal-input:focus {
+  border-color: rgba(77, 90, 229, 1);
+}
+.modal-label {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+
+  color: #8e8f99;
+}
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+
+  background-color: var(--background-btn-color);
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--btn-text-color);
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:is(:hover, :focus) {
+  background-color: var(--background-btn-hover-color);
 }
