@@ -746,6 +746,7 @@ span {
   fill: currentColor;
   transition-property: fill;
   transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input {
   display: block;
@@ -761,6 +762,9 @@ span {
   padding-top: 8px;
   padding-left: 38px;
   padding-bottom: 8px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
   border-color: rgba(77, 90, 229, 1);
