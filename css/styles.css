@@ -483,7 +483,8 @@ span {
   background-color: rgba(49, 208, 170, 1);
 }
 .footer-form {
-  position: relative;
+  display: flex;
+  gap: 24px;
 }
 .footer-input {
   display: inline-block;
@@ -500,7 +501,7 @@ span {
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-top: 48px;
+
   background-color: inherit;
 }
 .footer-input:focus {
@@ -508,10 +509,6 @@ span {
   outline: none;
 }
 .footer-input-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -528,7 +525,10 @@ span {
 }
 
 .footer-btn {
-  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   background-color: var(--background-btn-color);
   font-family: inherit;
   font-style: inherit;
@@ -537,7 +537,6 @@ span {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--btn-text-color);
-  margin-left: 24px;
   padding: 8px 24px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -731,9 +730,13 @@ span {
 .form-field:not(:last-child) {
   margin-bottom: 8px;
 }
+
 .form-field:nth-child(5) {
   margin-bottom: 24px;
   margin-top: 16px;
+}
+.form-field:nth-child(4) {
+  margin: 0;
 }
 .form-field {
   position: relative;
@@ -741,7 +744,7 @@ span {
 .form-field > .icon {
   position: absolute;
   top: 50%;
-
+  transform: translateY(-10%);
   left: 16px;
   fill: currentColor;
   transition-property: fill;
@@ -757,8 +760,8 @@ span {
   background-color: rgba(252, 252, 252, 1);
   letter-spacing: 0.04em;
   width: 100%;
-  height: 40px;
-  color: rgba(46, 47, 66, 0.4);
+
+  color: var(--main-color);
   padding-top: 8px;
   padding-left: 38px;
   padding-bottom: 8px;
@@ -773,7 +776,7 @@ span {
   fill: #4d5ae5;
 }
 .modal-label {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   margin-bottom: 4px;
@@ -808,6 +811,9 @@ span {
 }
 .comment {
   min-height: 120px;
+  resize: none;
+  width: 100%;
+  padding: 8px 16px;
 }
 
 .form-field > a {
@@ -818,6 +824,7 @@ span {
   color: #4d5ae5;
 }
 .acceptance-text {
+  padding-left: 24px;
   font-size: 12px;
   line-height: 1.33;
 
@@ -830,6 +837,10 @@ span {
   appearance: none;
 }
 .checkbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: inline-block;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
@@ -843,4 +854,7 @@ span {
   background-image: url(../images/Vector.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+.privacy-wrap {
+  position: relative;
 }

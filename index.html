@@ -236,13 +236,15 @@
                             </svg></a></li>
                 </ul>
             </div>
-            <div class="footer-form footer-wrap">
+            <div class="footer-wrap">
+                <p class="footer-input-text">Subscribe</p>
+                <form class="footer-form">
+                    <label><input type="email" placeholder="E-mail" class="footer-input"></label>
+                    <button class="footer-btn" type="submit">Subscribe<svg class="icon" width="24" height="20">
+                            <use href="./images/symbol-defs.svg#icon-send"></use>
+                        </svg></button>
+                </form>
 
-                <input type="email" name="subscribe" id="subscribe" placeholder="E-mail" class="footer-input">
-                <label for="subscribe" class="footer-input-text">Subscribe</label>
-                <button class="footer-btn" type="submit">Subscribe<svg class="icon" width="24" height="20">
-                        <use href="./images/symbol-defs.svg#icon-send"></use>
-                    </svg></button>
             </div>
         </div>
     </footer>
@@ -275,10 +277,10 @@
                     </svg>
                 </div>
 
-                <div class="form-field"><label for="comment" class="modal-label">Comment</label><input type="text"
-                        name="comment" id="comment" class="modal-input comment" placeholder="Text input">
+                <div class="form-field"><label for="comment" class="modal-label">Comment</label><textarea name="comment"
+                        id="comment" class="modal-input comment" placeholder="Text input"></textarea>
                 </div>
-                <div class="form-field">
+                <div class="form-field privacy-wrap">
                     <label for="privacy" class="acceptance-text"><input type="checkbox" name="privacy" id="privacy"
                             class="label-checkbox"><span class="checkbox"></span>I accept the terms and conditions of
                         the <a href="#">Privacy Policy</a></label>
